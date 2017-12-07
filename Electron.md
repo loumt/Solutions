@@ -1,9 +1,19 @@
-> Electron与Jquery相冲突
+#### Electron与Jquery相冲突
 
-#### jquery文件底部加 if(typeof module === 'object') {window.jQuery = window.$ = module.exports;};
+> jquery文件底部加 if(typeof module === 'object') {window.jQuery = window.$ = module.exports;};
 
 
-> electron-packager 安装 npm install electron-packager -g
+#### electron-packager 安装
 
-> electron-packager 打包
-#### "packet": "electron-packager ./ cloudapp --platform=win32 --arch=x64 --out ./cloudapp-version --version 1.0.0 --icon=./static/images/favicon.ico --overwrite"
+> npm install electron-packager -g
+
+#### electron-packager 打包
+
+> "packet": "electron-packager ./ cloudapp --platform=win32 --arch=x64 --out ./cloudapp-version --version 1.0.0 --icon=./static/images/favicon.ico --overwrite"
+
+#### electron:vue项目中加入electron实现exe打包
+
+* 将electron中的main.js文件将入到vue中的build目录下，改名为electron.js
+* 在vue项目中安装electron和electron-packager,npm install electron --save-dev 和 npm install electron-packager --save-dev
+* 在package.json中添加 "electron_dev": "npm run build && electron build/electron.js
+* 在package.json中添加 "electron_build": "electron-packager <项目目录> <应用名称> --platform=win32 --arch=x64 --out <打包后的目录> --version 1.0.0 --icon=./static/images/favicon.ico --overwrite"
