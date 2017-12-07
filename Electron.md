@@ -16,4 +16,6 @@
 * 将electron中的main.js文件将入到vue中的build目录下，改名为electron.js
 * 在vue项目中安装electron和electron-packager,npm install electron --save-dev 和 npm install electron-packager --save-dev
 * 在package.json中添加 "electron_dev": "npm run build && electron build/electron.js
-* 在package.json中添加 "electron_build": "electron-packager <项目目录> <应用名称> --platform=win32 --arch=x64 --out <打包后的目录> --version 1.0.0 --icon=./static/images/favicon.ico --overwrite"
+* 在package.json中添加 "electron_packager": "electron-packager <项目目录> <应用名称> --platform=win32 --arch=x64 --out <打包后的目录> --version 1.0.0 --icon=./static/images/favicon.ico --overwrite"
+* 在vue build的目录里添加package.json和electron项目的main文件，在这即重命名的electron.js
+* npm run electron_packager完成打包
