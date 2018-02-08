@@ -1,5 +1,6 @@
 #### cors
 
+```
 app.all('*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", ['http://192.168.16.4:3005','http://192.168.16.3:3005']);
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
@@ -8,3 +9,5 @@ app.all('*', function(req, res, next) {
     res.header("Content-Type", "application/json;charset=utf-8");
     next();
 });
+```
+
