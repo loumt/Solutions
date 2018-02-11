@@ -1,4 +1,4 @@
-#### cors
+#### nodejs解决cors问题,设置header方式
 
 ```
 app.all('*', function(req, res, next) {
