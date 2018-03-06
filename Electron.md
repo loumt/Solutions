@@ -20,3 +20,7 @@
 * 在package.json中添加 "electron_packager": "electron-packager <项目目录> <应用名称> --platform=win32 --arch=x64 --out <打包后的目录> --version 1.0.0 --icon=./static/images/favicon.ico --overwrite"
 * 在vue build的目录里添加package.json和electron项目的main文件，在这即重命名的electron.js
 * npm run electron_packager完成打包
+
+#### electron 内嵌 db
+
+* electron可使用的db : https://www.jianshu.com/p/8d3e2c5baec4
