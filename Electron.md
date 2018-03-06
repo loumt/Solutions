@@ -24,3 +24,7 @@
 #### electron 内嵌 db
 
 * electron可使用的db : https://www.jianshu.com/p/8d3e2c5baec4
+
+#### electron发源人的自述
+
+* https://www.zhihu.com/question/36292298/answer/102418523
