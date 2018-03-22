@@ -36,5 +36,6 @@
 * win.show()
 
 #### electron中使用node原生模块 ffi ref等
-1.安装sqlite3  npm i --save sqlite3 --build-from-source --target=1.7.6 --runtime=electron --dist-url=https://atom.io/download/electron
-2.安装官方推荐的electron-rebuild模块, ./node_modules/.bin/electron-rebuild --module-dir=<package.json位置>
+>> 需安装visual python2.7等 0.0
+* 1.安装sqlite3  npm i --save sqlite3 --build-from-source --target=1.7.6 --runtime=electron --dist-url=https://atom.io/download/electron
+* 2.安装官方推荐的electron-rebuild模块, ./node_modules/.bin/electron-rebuild --module-dir=<package.json位置>
