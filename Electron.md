@@ -34,3 +34,7 @@
 * let hwnd = win.getNativeWindowHandle() //获取窗口句柄。
 * user32.GetSystemMenu(hwnd.readUInt32LE(0), true); //禁用系统菜单.
 * win.show()
+
+#### electron中使用node原生模块 ffi ref等
+1.安装sqlite3  npm i --save sqlite3 --build-from-source --target=1.7.6 --runtime=electron --dist-url=https://atom.io/download/electron
+2.安装官方推荐的electron-rebuild模块, ./node_modules/.bin/electron-rebuild --module-dir=<package.json位置>
