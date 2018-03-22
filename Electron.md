@@ -28,3 +28,9 @@
 #### electron发源人的自述
 
 * https://www.zhihu.com/question/36292298/answer/102418523
+
+#### 禁用系统菜单
+* 安装ffi与ref模块
+* let hwnd = win.getNativeWindowHandle() //获取窗口句柄。
+* user32.GetSystemMenu(hwnd.readUInt32LE(0), true); //禁用系统菜单.
+* win.show()
