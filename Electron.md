@@ -48,3 +48,5 @@
 * 4.electron-rebuild.cmd --module-dir=<package.json位置>
 * 5.win api https://hotkeyit.github.io/v2/docs/commands/WinApi.htm
 
+#### electron使用自定义窗口解决窗口移动问题
+* electron-drag模块
