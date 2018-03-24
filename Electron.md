@@ -35,7 +35,16 @@
 * user32.GetSystemMenu(hwnd.readUInt32LE(0), true); //禁用系统菜单.
 * win.show()
 
-#### electron中使用node原生模块 ffi ref等
->> 需安装visual python2.7等 0.0
-* 1.安装sqlite3  npm i --save sqlite3 --build-from-source --target=1.7.6 --runtime=electron --dist-url=https://atom.io/download/electron
-* 2.安装官方推荐的electron-rebuild模块, ./node_modules/.bin/electron-rebuild --module-dir=<package.json位置>
+#### electron集成sqlite3轻量级数据库
+* 需安装visual python2.7等 0.0
+* 安装sqlite3  npm i --save sqlite3 --build-from-source --target=1.7.6 --runtime=electron --dist-url=https://atom.io/download/electron
+
+
+#### electron中使用node原生模块 ffi ref等,及调用window api
+* 需安装visual python2.7等 0.0
+* 1.npm i ffi ref --save
+* 2.安装官方推荐的electron-rebuild模块
+* 3.编译  cd node_modules/.bin 
+* 4.electron-rebuild.cmd --module-dir=<package.json位置>
+* 5.win api https://hotkeyit.github.io/v2/docs/commands/WinApi.htm
+
