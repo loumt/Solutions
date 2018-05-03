@@ -14,5 +14,5 @@ app.all('*', function(req, res, next) {
 #### nodejs项目package.json变量文档
 
 ```
- [https://docs.npmjs.com/misc/scripts#packagejson-vars]
+ https://docs.npmjs.com/misc/scripts#packagejson-vars
 ```
