@@ -16,3 +16,23 @@
    3.mysql配置文件修改或添加 sql_mode = "STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION" (原理与2一样)，重启服务。
 ``` 
         
+
+### centos7 mysql安装
+
+```
+1.yum -y install wget(安装wget)
+2.wget -i -c http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm
+3.yum -y install mysql57-community-release-el7-10.noarch.rpm
+4.yum -y install mysql-community-server
+5.systemctl start  mysqld.service 
+6.grep "password" /var/log/mysqld.log(查看root初始密码)
+7.mysql -u root -p
+8.设置密码
+9.GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root' WITH GRANT OPTION; (所有机器访问mysql)
+10.flush privileges;
+11.防火墙端口开放 或者 直接关闭防火墙
+
+取消密码复杂度:
+set global validate_password_policy=0; (取消密码字符数据复杂度)
+set global validate_password_length=1; (设置密码长度)(需要先修改root初始密码)
+```
