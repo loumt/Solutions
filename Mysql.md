@@ -12,7 +12,7 @@
   
   解决方法
    1.更换mysql版本
-   2,mysql>seelect @@sql_mode  将字符中的ONLY_FULL_GROUP_BY去除，重新设置,set @@sql_mode，重启服务
+   2,mysql>seelect @@sql_mode  将字符中的ONLY_FULL_GROUP_BY去除，重新设置,set @@sql_mode，重启服务(推荐使用配置文件去修改)
    3.mysql配置文件修改或添加 sql_mode = "STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION" (原理与2一样)，重启服务。
 ``` 
         
