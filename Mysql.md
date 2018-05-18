@@ -36,3 +36,34 @@
 set global validate_password_policy=0; (取消密码字符数据复杂度)
 set global validate_password_length=1; (设置密码长度)(需要先修改root初始密码)
 ```
+
+### Mysql 5.7中用来代替触发器的功能
+
+```
+# 5.7 新增计算列功能
+# 5.7之前依靠触发器
+CREATE TABLE t (
+	id INT auto_increment NOT NULL,
+	c1 INT DEFAULT NULL,
+	c2 INT DEFAULT NULL,
+	c3 INT DEFAULT NULL,
+	PRIMARY KEY (id)
+)
+create TRIGGER inst_t before insert on t for each row set new.c3=new.c1+new.c2;
+show triggers;
+insert into t(c1,c2)values(1,2);
+create trigger upd_t before update on t for each row set new.c3=new.c1+new.c2;
+update t set c1=4 where id=1;
+# 或创建view去计算
+create view vm_t as select id,c1,c2,c1+c2 as c3 from t;
+
+#5.7的做法
+create table  b(
+ id int auto_increment not null,
+ 	c1 INT DEFAULT NULL,
+	c2 INT DEFAULT NULL,
+	c3 INT as(c1+c2),
+PRIMARY key(id)
+)
+insert into b(c1,c2)values(2,4);
+```
