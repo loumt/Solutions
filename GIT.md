@@ -6,3 +6,9 @@
 ```
 git checkout -b 本地分支名 origin/远程分支名
 ```
+
+### Git将远程分支回退到某个点(本地分支也回退)
+```
+git reset --hard <commit-id>
+git push origin <当前分支名>
+```
