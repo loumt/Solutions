@@ -67,3 +67,9 @@ PRIMARY key(id)
 )
 insert into b(c1,c2)values(2,4);
 ```
+
+### mysql允许root用户远程连接
+```
+update mysql.user set Host='%' where HOST='localhost' and User='root';
+flush privileges;
+```
