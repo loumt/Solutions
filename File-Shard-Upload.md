@@ -161,3 +161,15 @@ exports.upload = (req, res, next) => {
     }
 }
 ```
+
+3.附加功能
+
+```
+ 1.进度条
+    import NProgress from 'nprogress'
+    import 'nprogress/nprogress.css'
+    //进度计算
+    let rate  = ++ success / shardCount
+    NProgress.set(rate)
+    
+```
